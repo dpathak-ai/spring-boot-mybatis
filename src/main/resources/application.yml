@@ -1,0 +1,30 @@
+spring:
+  name: spring-mybatis-example
+  server:
+    port: 8080
+  datasource:
+   driver-class-name: com.mysql.jdbc.Driver
+   url: jdbc:mysql://localhost:3306/test?useUnicode=true&serverTimezone=UTC
+   username: root
+   password: mysqlbhn2018
+   type: com.zaxxer.hikari.HikariDataSource
+   hikari:
+      minimum-idle: 10
+      maximum-pool-size: 25
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: HikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+   jpa:
+     show-sql: true
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:mapper/datamapper/*.xml
+
+logging:
+ level:
+  com.dp.data: DEBUG
