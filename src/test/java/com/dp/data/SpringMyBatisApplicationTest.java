@@ -22,36 +22,36 @@ public class SpringMyBatisApplicationTest {
     private TUserMapper usersmapper;
 	
 	
-//	@Test
-//	public void selectAll() {
-//		List<TUser> users = usersmapper.selectAll();
-//		for(TUser user : users) {
-//			System.out.println(user.getName());
-//		}
-//	}
+	@Test
+	public void selectAll() {
+		List<TUser> users = usersmapper.selectAll();
+		for(TUser user : users) {
+			System.out.println(user.getName());
+		}
+	}
 	
-//	@Test
-//	public void insertSelective() {
-//		TUser user = new TUser();
-//		user.setEmail("aaa@sss");
-//		user.setName("dphhjhj");
-//		user.setPassword("aaaa");
-//		usersmapper.insertSelective(user);
-//		
-//	}
+	@Test
+	public void insertSelective() {
+		TUser user = new TUser();
+		user.setEmail("aaa@sss");
+		user.setName("dphhjhj");
+		user.setPassword("aaaa");
+		usersmapper.insertSelective(user);
+		
+	}
 	
-//	@Test
-//	public void deleteAll() {
-//		TUser usr = new TUser();
-//		usersmapper.delete(usr);
-//	}
+	@Test
+	public void deleteAll() {
+		TUser usr = new TUser();
+		usersmapper.delete(usr);
+	}
 	
-//	@Test
-//	public void deleteAll() {
-//		TUser usr = new TUser();
-//		usr.setUserId(10);
-//		usersmapper.delete(usr);
-//	}
+	@Test
+	public void delete() {
+		TUser usr = new TUser();
+		usr.setUserId(10);
+		usersmapper.delete(usr);
+	}
 	
 	
 	@Test
