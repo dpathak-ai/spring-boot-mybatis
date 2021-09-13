@@ -46,6 +46,8 @@ public class SpringMyBatisApplicationTest {
 		usersmapper.delete(usr);
 	}
 	
+	
+	//Added More comments
 	@Test
 	public void delete() {
 		TUser usr = new TUser();
